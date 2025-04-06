@@ -1,6 +1,5 @@
 # hw2
 ![alt text](image.png)
-![alt text](image-1.png)
 以上為待修正內容
 
 優化內容總結
@@ -21,3 +20,4 @@
 預加載關鍵資源以減少鏈式請求。
 確保文字在字體加載期間可見：
 使用 font-display: swap 確保文字在字體加載期間仍然可見。
+
