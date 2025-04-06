@@ -69,9 +69,13 @@ a:focus {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
-  color: initial;
+a {
+  color: #007bff; /* 深藍色文字 */
+  text-decoration: underline; /* 增加可見性 */
+}
+
+a:hover {
+  color: #0056b3; /* 更深的藍色 */
 }
 
 .btn,
@@ -79,6 +83,18 @@ a:focus {
   outline: none !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+a.quote_btn {
+  color: #ffffff; /* 白色文字 */
+  background-color: #007bff; /* 深藍色背景 */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a.quote_btn:hover {
+  background-color: #0056b3; /* 更深的藍色，增加 hover 效果 */
 }
 
 /*header section*/
@@ -667,7 +683,7 @@ a:focus {
   color: #1c1b1b;
 }
 
-.contact_section input:-ms-input-placeholder {
+contact_section input:-ms-input-placeholder {
   color: #1c1b1b;
 }
 
@@ -681,6 +697,19 @@ a:focus {
 
 .contact_section input.message-box {
   height: 120px;
+}
+
+button {
+  color: #ffffff; /* 白色文字 */
+  background-color: #28a745; /* 綠色背景 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838; /* 更深的綠色 */
 }
 
 .contact_section button {
