@@ -5,27 +5,51 @@
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
   <title>Digian</title>
 
+  <!-- Inline critical CSS -->
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero_area {
+      background-color: #7335b7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar-brand span {
+      font-weight: bold;
+      color: #ffffff;
+      font-size: 24px;
+    }
+  </style>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- Preload Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Preload Bootstrap CSS -->
+  <link rel="preload" href="css/bootstrap.css" as="style" />
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Preload Hero Background Image -->
+  <link rel="preload" href="images/hero-bg.webp" as="image" />
 
+  <!-- Defer non-critical CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="css/bootstrap.css" /></noscript>
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body>
@@ -79,7 +103,10 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <picture>
+                      <source srcset="images/slider-img.webp" type="image/webp">
+                      <img src="images/slider-img.png" alt="Slider Image" width="800" height="600">
+                    </picture>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -105,7 +132,10 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <picture>
+                      <source srcset="images/slider-img.webp" type="image/webp">
+                      <img src="images/slider-img.png" alt="Slider Image" width="800" height="600">
+                    </picture>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -131,7 +161,10 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <picture>
+                      <source srcset="images/slider-img.webp" type="image/webp">
+                      <img src="images/slider-img.png" alt="Slider Image" width="800" height="600">
+                    </picture>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -655,6 +688,14 @@
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
+
+  <!-- Apache Expires Module -->
+  <IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+  </IfModule>
 
 </body>
 
