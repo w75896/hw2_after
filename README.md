@@ -1,7 +1,6 @@
 # hw2
 ![alt text](image.png)
-以上為待修正內容
-
+![alt text](image-1.png)
 優化內容總結
 預加載資源：
 使用 <link rel="preconnect"> 和 <link rel="preload"> 預加載字體、CSS 和圖片。
@@ -20,4 +19,4 @@
 預加載關鍵資源以減少鏈式請求。
 確保文字在字體加載期間可見：
 使用 font-display: swap 確保文字在字體加載期間仍然可見。
-
+SEO DATAMETA等等
